@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
-            <Label Content="Wat wil je oefenen?" Margin="10" Height="50"/>
+            <Label Content="Wat wil je oefenen?" Margin="10" Height="50" VerticalContentAlignment="Center"/>
             <Button x:Name="multiplicationButton" Content="Maaltafels" Margin="10" Height="50" Padding="5" />
             <Button x:Name="divisionButton" Content="Deeltafels" Margin="10" Height="50" Padding="5" />
             <Button x:Name="combinationButton" Content="Door elkaar" Margin="10" Height="50" Padding="5" />
