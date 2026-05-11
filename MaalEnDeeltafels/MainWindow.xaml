@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaalEnDeeltafels"
         mc:Ignorable="d"
-        Title="Maal- en deeltafels" Height="450" Width="800">
-    <Grid Background="LightPink">
+        Title="Maal- en deeltafels" Height="450" Width="800" Closing="OnClosingWindow">
+    <Grid Background="MediumPurple">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -18,18 +18,19 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
-            <Label Content="Wat wil je oefenen?" Margin="10" Height="50" VerticalContentAlignment="Center"/>
-            <Button x:Name="multiplicationButton" Content="Maaltafels" Margin="10" Height="50" Padding="5" />
-            <Button x:Name="divisionButton" Content="Deeltafels" Margin="10" Height="50" Padding="5" />
-            <Button x:Name="combinationButton" Content="Door elkaar" Margin="10" Height="50" Padding="5" />
+            <Label Content="Wat wil je oefenen?" Margin="10" Height="50" FontSize="20" VerticalContentAlignment="Center" Foreground="Pink" />
+            <Button x:Name="multiplicationButton" Content="Maaltafels" FontSize="16" Margin="10" Height="50" Padding="5" Click="OnMultiplicationButtonClicked" />
+            <Button x:Name="divisionButton" Content="Deeltafels" Margin="10" FontSize="16" Height="50" Padding="5" Click="OnDivisionButtonClicked" />
+            <Button x:Name="combinationButton" Content="Door elkaar" Margin="10" FontSize="16" Height="50" Padding="5" Click="OnMixButtonClicked" />
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-            <TextBlock x:Name="inputTextBlock" Background="White" Margin="20" Width="150" Height="80"/>
-            <TextBox x:Name="solutionTextBox" Margin="20" Width="150" Height="80"/>
+            <TextBlock x:Name="inputTextBlock" Background="White" Margin="20" Width="150" Height="80" FontSize="28" VerticalAlignment="Center" Foreground="Turquoise" />
+            <TextBox x:Name="solutionTextBox" Margin="20" Width="150" Height="80" KeyDown="OnKeyDownEnter" FontSize="28" Foreground="Turquoise" />
+            <TextBlock x:Name="warningTextBlock" Margin="20" Width="150" Height="80" FontSize="16" TextWrapping="Wrap"/>
 
         </StackPanel>
-        <Image x:Name="awardImage" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="10"/>
-        <Button Grid.Row="2" Grid.Column="1" x:Name="closeButton" Content="Afsluiten" Margin="10" Height="50" Padding="5"/>
-
+        <Image x:Name="awardImage" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"  Margin="10"/>
+        <Label Grid.Row="2" Grid.Column="0" x:Name="dateLabel" Margin="10" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="24" Foreground="Pink"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="closeButton" Content="Afsluiten" FontSize="16" Margin="10" Height="50" Padding="5" Click="OnCloseButtonClicked" />
     </Grid>
 </Window>
